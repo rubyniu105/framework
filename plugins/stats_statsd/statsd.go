@@ -100,7 +100,7 @@ func (module *StatsDModule) Start() error {
 	if config.BufferSize <= 0 {
 		config.BufferSize = 100
 	}
-	module.buffer = statsd.NewStatsdBuffer(interval, config.BufferSize, module.statsdclient)
+	module.buffer = statsd.NewStatsdBuffer(interval /*config.BufferSize,*/, module.statsdclient)
 
 	module.statsdInited = true
 
