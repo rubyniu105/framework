@@ -155,7 +155,7 @@ func SetLogging(loggingCfg *config.LoggingConfig, appName string, baseDir string
 		fmt.Println(err)
 	}
 
-	globalConstraints, err := log.NewMinMaxConstraints(log.TraceLvl, log.Off)
+	globalConstraints, err := log.NewMinMaxConstraints(log.TraceLvl, log.DebugLvl)
 	if err != nil {
 		panic(err)
 	}
